@@ -364,6 +364,47 @@ The PDF export engine in `backend/src/controllers/exportController.js` is built 
 
 ---
 
-## 📄 License
+## 🚀 Deployment & Live Demo
 
-This project is licensed under the **ISC License**. Open-source and enterprise ready. Built with ❤️ for developers worldwide.
+<p align="center">
+
+<a href="https://build-forge-ai-eight.vercel.app">
+<img src="https://img.shields.io/badge/🚀%20Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel" />
+</a>
+
+<a href="https://buildforge-ai-backend.onrender.com">
+<img src="https://img.shields.io/badge/⚡%20Backend-Render-blue?style=for-the-badge&logo=render" />
+</a>
+
+</p>
+
+| Component      | Platform        | Status           |
+| -------------- | --------------- | ---------------- |
+| 🎨 Frontend    | Vercel          | 🟢 Live          |
+| ⚡ Backend      | Render          | 🟢 Live          |
+| 🔐 HTTPS       | Vercel + Render | 🟢 Enabled       |
+| 🤖 AI Features | Gemini / Groq   | 🟡 API-dependent |
+
+### 🔗 Production Links
+
+* 🌐 **Live Demo:** https://build-forge-ai-eight.vercel.app
+* ⚡ **Backend:** https://buildforge-ai-backend.onrender.com
+* 🔄 **Alternate Deployment:** https://build-forge-ai-eight-nu.vercel.app
+
+### 🏗️ Architecture
+
+```text
+👤 User
+   │
+   ▼
+🌐 Vercel — React Frontend
+   │
+   │ REST API
+   ▼
+⚡ Render — Node.js/Express Backend
+   │
+   ▼
+🤖 AI Engine + Project Services
+```
+
+> ✅ Frontend and backend are successfully deployed and accessible online.
