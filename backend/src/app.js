@@ -18,9 +18,24 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
 securityMiddleware(app);
 
+// Allowed origins configuration
+const allowedOrigins = [
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "https://build-forge-ai-eight.vercel.app",
+    "https://buildforge-ai-backend.onrender.com"
+];
+
 app.use(
     cors({
-        origin: "http://localhost:5173",
+        origin: function(origin, callback) {
+            // Allow requests with no origin (like mobile apps or curl) or if origin is allowed
+            if (!origin || allowedOrigins.includes(origin) || origin.endsWith(".vercel.app")) {
+                callback(null, true);
+            } else {
+                callback(new Error("Not allowed by CORS"));
+            }
+        },
         credentials: true,
     })
 );
