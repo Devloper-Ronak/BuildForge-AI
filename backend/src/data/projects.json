@@ -1,0 +1,1878 @@
+[
+  {
+    "id": "388cc00a-8600-42e7-8ac0-c7748b0ef839",
+    "userId": "ad3d26ca-ce77-4504-9b25-4527615c77cf",
+    "idea": "AI Health Coach",
+    "project": {
+      "projectName": "HealthPal",
+      "tagline": "Your AI-powered health and wellness coach",
+      "projectDescription": "HealthPal is an AI-powered health and wellness coaching platform that provides personalized recommendations and guidance to users. The platform uses machine learning algorithms to analyze user data and provide tailored advice on nutrition, fitness, stress management, and sleep. HealthPal aims to help users achieve their health and wellness goals by providing a holistic approach to wellness, including physical activity, mental well-being, and nutritional balance. The platform will be accessible through a user-friendly web and mobile application, allowing users to track their progress, set goals, and receive personalized coaching.",
+      "overview": "HealthPal is an AI-powered health and wellness coaching platform that provides personalized recommendations and guidance to users. The platform uses machine learning algorithms to analyze user data and provide tailored advice on nutrition, fitness, stress management, and sleep. HealthPal aims to help users achieve their health and wellness goals by providing a holistic approach to wellness, including physical activity, mental well-being, and nutritional balance. The platform will be accessible through a user-friendly web and mobile application, allowing users to track their progress, set goals, and receive personalized coaching.",
+      "executiveSummary": "HealthPal is an AI-powered health and wellness coaching platform that provides personalized recommendations and guidance to users. The platform uses machine learning algorithms to analyze user data and provide tailored advice on nutrition, fitness, stress management, and sleep. HealthPal aims to help users achieve their health and wellness goals by providing a holistic approach to wellness, including physical activity, mental well-being, and nutritional balance. The platform will be accessible through a user-friendly web and mobile application, allowing users to track their progress, set goals, and receive personalized coaching.",
+      "features": [
+        {
+          "id": 1,
+          "name": "User Profiling",
+          "description": "Users can create a profile, providing demographic and health-related information.",
+          "priority": "High",
+          "businessImpact": "Allows for personalized coaching and recommendations.",
+          "technicalNotes": "Uses machine learning algorithms to analyze user data and provide insights."
+        },
+        {
+          "id": 2,
+          "name": "AI-Powered Coaching",
+          "description": "Provides personalized coaching and recommendations based on user data and goals.",
+          "priority": "High",
+          "businessImpact": "Improves user outcomes and engagement.",
+          "technicalNotes": "Uses natural language processing and machine learning algorithms to generate coaching content."
+        },
+        {
+          "id": 3,
+          "name": "Goal Setting",
+          "description": "Users can set and track health and wellness goals, with reminders and notifications.",
+          "priority": "Medium",
+          "businessImpact": "Encourages user engagement and motivation.",
+          "technicalNotes": "Uses gamification techniques to enhance user experience."
+        },
+        {
+          "id": 4,
+          "name": "Progress Tracking",
+          "description": "Users can track progress, with visualizations and analytics.",
+          "priority": "Medium",
+          "businessImpact": "Provides users with insights into their progress and areas for improvement.",
+          "technicalNotes": "Uses data visualization libraries to create interactive and dynamic visualizations."
+        },
+        {
+          "id": 5,
+          "name": "Community Forum",
+          "description": "Users can connect with others, share experiences, and receive support.",
+          "priority": "Low",
+          "businessImpact": "Fosters sense of community and social support.",
+          "technicalNotes": "Uses social media platforms and forums to facilitate user interaction."
+        },
+        {
+          "id": 6,
+          "name": "Integrations",
+          "description": "Integrates with popular health and fitness apps and devices.",
+          "priority": "Medium",
+          "businessImpact": "Enhances user experience and provides more comprehensive data.",
+          "technicalNotes": "Uses APIs and SDKs to integrate with third-party services."
+        },
+        {
+          "id": 7,
+          "name": "Personalized Recommendations",
+          "description": "Provides users with personalized recommendations for nutrition, fitness, and stress management.",
+          "priority": "High",
+          "businessImpact": "Improves user outcomes and engagement.",
+          "technicalNotes": "Uses machine learning algorithms to analyze user data and provide tailored recommendations."
+        },
+        {
+          "id": 8,
+          "name": "Mental Health Support",
+          "description": "Provides users with access to mental health resources and support.",
+          "priority": "Medium",
+          "businessImpact": "Supports user mental health and well-being.",
+          "technicalNotes": "Uses partnerships with mental health organizations to provide resources and support."
+        }
+      ],
+      "technologyStack": {
+        "frontend": [
+          {
+            "name": "React",
+            "purpose": "Building user interface components."
+          },
+          {
+            "name": "Redux",
+            "purpose": "Managing global state and side effects."
+          }
+        ],
+        "backend": [
+          {
+            "name": "Node.js",
+            "purpose": "Building server-side logic and API endpoints."
+          },
+          {
+            "name": "Express",
+            "purpose": "Building RESTful API endpoints."
+          }
+        ],
+        "database": [
+          {
+            "name": "MongoDB",
+            "purpose": "Storing user data and analytics."
+          }
+        ],
+        "ai": [
+          {
+            "name": "TensorFlow",
+            "purpose": "Building machine learning models."
+          }
+        ],
+        "devTools": [
+          {
+            "name": "Git",
+            "purpose": "Version control and collaboration."
+          }
+        ]
+      },
+      "systemArchitecture": {
+        "type": "Microservices",
+        "description": "Separate services for user management, data analysis, and coaching.",
+        "components": [
+          {
+            "name": "User Service",
+            "responsibility": "Managing user profiles and data.",
+            "technology": "Node.js and Express",
+            "dependencies": [
+              "Database"
+            ],
+            "scalability": "High",
+            "security": "High"
+          },
+          {
+            "name": "Data Analysis Service",
+            "responsibility": "Analyzing user data and providing insights.",
+            "technology": "TensorFlow and Python",
+            "dependencies": [
+              "User Service"
+            ],
+            "scalability": "High",
+            "security": "High"
+          },
+          {
+            "name": "Coaching Service",
+            "responsibility": "Providing personalized coaching and recommendations.",
+            "technology": "Node.js and Express",
+            "dependencies": [
+              "Data Analysis Service"
+            ],
+            "scalability": "High",
+            "security": "High"
+          }
+        ],
+        "dataFlow": "User data is collected and stored in the database, analyzed by the data analysis service, and used to provide personalized coaching and recommendations."
+      },
+      "databaseDesign": [
+        {
+          "collection": "users",
+          "purpose": "Stores application users.",
+          "fields": [
+            {
+              "name": "_id",
+              "type": "ObjectId",
+              "required": true,
+              "description": "Unique user identifier."
+            },
+            {
+              "name": "name",
+              "type": "String",
+              "required": true,
+              "description": "User display name."
+            },
+            {
+              "name": "email",
+              "type": "String",
+              "required": true,
+              "description": "Unique user email."
+            }
+          ],
+          "indexes": [],
+          "relationships": []
+        },
+        {
+          "collection": "projects",
+          "purpose": "Stores generated software blueprints.",
+          "fields": [
+            {
+              "name": "_id",
+              "type": "ObjectId",
+              "required": true,
+              "description": "Unique project identifier."
+            },
+            {
+              "name": "idea",
+              "type": "String",
+              "required": true,
+              "description": "Original project idea."
+            },
+            {
+              "name": "project",
+              "type": "Object",
+              "required": true,
+              "description": "Generated blueprint."
+            }
+          ],
+          "indexes": [],
+          "relationships": []
+        }
+      ],
+      "restApiDesign": {
+        "endpoints": [
+          {
+            "name": "Get User Profile",
+            "method": "GET",
+            "endpoint": "/users/{id}",
+            "description": "Retrieve user profile information.",
+            "authentication": "Required",
+            "authorization": "User",
+            "headers": {},
+            "queryParameters": {},
+            "pathParameters": {
+              "id": "User ID"
+            },
+            "request": {},
+            "successResponse": {
+              "status": 200,
+              "body": {
+                "name": "String",
+                "email": "String"
+              }
+            },
+            "errorResponses": [
+              {
+                "code": 404,
+                "message": "User not found.",
+                "when": "User ID is invalid or user does not exist."
+              }
+            ]
+          },
+          {
+            "name": "Create User Profile",
+            "method": "POST",
+            "endpoint": "/users",
+            "description": "Create a new user profile.",
+            "authentication": "Required",
+            "authorization": "Admin",
+            "headers": {},
+            "queryParameters": {},
+            "pathParameters": {},
+            "request": {
+              "body": {
+                "name": "String",
+                "email": "String"
+              }
+            },
+            "successResponse": {
+              "status": 201,
+              "body": {
+                "id": "String",
+                "name": "String",
+                "email": "String"
+              }
+            },
+            "errorResponses": [
+              {
+                "code": 400,
+                "message": "Invalid request.",
+                "when": "Request body is invalid or missing required fields."
+              }
+            ]
+          },
+          {
+            "name": "Get User Data",
+            "method": "GET",
+            "endpoint": "/users/{id}/data",
+            "description": "Retrieve user data and analytics.",
+            "authentication": "Required",
+            "authorization": "User",
+            "headers": {},
+            "queryParameters": {},
+            "pathParameters": {
+              "id": "User ID"
+            },
+            "request": {},
+            "successResponse": {
+              "status": 200,
+              "body": {
+                "data": "Mixed"
+              }
+            },
+            "errorResponses": [
+              {
+                "code": 404,
+                "message": "User not found.",
+                "when": "User ID is invalid or user does not exist."
+              }
+            ]
+          },
+          {
+            "name": "Create User Data",
+            "method": "POST",
+            "endpoint": "/users/{id}/data",
+            "description": "Create new user data and analytics.",
+            "authentication": "Required",
+            "authorization": "User",
+            "headers": {},
+            "queryParameters": {},
+            "pathParameters": {
+              "id": "User ID"
+            },
+            "request": {
+              "body": {
+                "data": "Mixed"
+              }
+            },
+            "successResponse": {
+              "status": 201,
+              "body": {
+                "id": "String",
+                "data": "Mixed"
+              }
+            },
+            "errorResponses": [
+              {
+                "code": 400,
+                "message": "Invalid request.",
+                "when": "Request body is invalid or missing required fields."
+              }
+            ]
+          },
+          {
+            "name": "Get Coaching Recommendations",
+            "method": "GET",
+            "endpoint": "/users/{id}/coaching",
+            "description": "Retrieve personalized coaching recommendations.",
+            "authentication": "Required",
+            "authorization": "User",
+            "headers": {},
+            "queryParameters": {},
+            "pathParameters": {
+              "id": "User ID"
+            },
+            "request": {},
+            "successResponse": {
+              "status": 200,
+              "body": {
+                "recommendations": "Array"
+              }
+            },
+            "errorResponses": [
+              {
+                "code": 404,
+                "message": "User not found.",
+                "when": "User ID is invalid or user does not exist."
+              }
+            ]
+          },
+          {
+            "name": "Create Coaching Recommendations",
+            "method": "POST",
+            "endpoint": "/users/{id}/coaching",
+            "description": "Create new coaching recommendations.",
+            "authentication": "Required",
+            "authorization": "Coach",
+            "headers": {},
+            "queryParameters": {},
+            "pathParameters": {
+              "id": "User ID"
+            },
+            "request": {
+              "body": {
+                "recommendations": "Array"
+              }
+            },
+            "successResponse": {
+              "status": 201,
+              "body": {
+                "id": "String",
+                "recommendations": "Array"
+              }
+            },
+            "errorResponses": [
+              {
+                "code": 400,
+                "message": "Invalid request.",
+                "when": "Request body is invalid or missing required fields."
+              }
+            ]
+          },
+          {
+            "name": "Get User Progress",
+            "method": "GET",
+            "endpoint": "/users/{id}/progress",
+            "description": "Retrieve user progress and analytics.",
+            "authentication": "Required",
+            "authorization": "User",
+            "headers": {},
+            "queryParameters": {},
+            "pathParameters": {
+              "id": "User ID"
+            },
+            "request": {},
+            "successResponse": {
+              "status": 200,
+              "body": {
+                "progress": "Mixed"
+              }
+            },
+            "errorResponses": [
+              {
+                "code": 404,
+                "message": "User not found.",
+                "when": "User ID is invalid or user does not exist."
+              }
+            ]
+          },
+          {
+            "name": "Create User Progress",
+            "method": "POST",
+            "endpoint": "/users/{id}/progress",
+            "description": "Create new user progress and analytics.",
+            "authentication": "Required",
+            "authorization": "User",
+            "headers": {},
+            "queryParameters": {},
+            "pathParameters": {
+              "id": "User ID"
+            },
+            "request": {
+              "body": {
+                "progress": "Mixed"
+              }
+            },
+            "successResponse": {
+              "status": 201,
+              "body": {
+                "id": "String",
+                "progress": "Mixed"
+              }
+            },
+            "errorResponses": [
+              {
+                "code": 400,
+                "message": "Invalid request.",
+                "when": "Request body is invalid or missing required fields."
+              }
+            ]
+          },
+          {
+            "name": "Get Community Forum Posts",
+            "method": "GET",
+            "endpoint": "/community/posts",
+            "description": "Retrieve community forum posts.",
+            "authentication": "Required",
+            "authorization": "User",
+            "headers": {},
+            "queryParameters": {},
+            "pathParameters": {},
+            "request": {},
+            "successResponse": {
+              "status": 200,
+              "body": {
+                "posts": "Array"
+              }
+            },
+            "errorResponses": [
+              {
+                "code": 404,
+                "message": "No posts found.",
+                "when": "No posts exist in the community forum."
+              }
+            ]
+          },
+          {
+            "name": "Create Community Forum Post",
+            "method": "POST",
+            "endpoint": "/community/posts",
+            "description": "Create a new community forum post.",
+            "authentication": "Required",
+            "authorization": "User",
+            "headers": {},
+            "queryParameters": {},
+            "pathParameters": {},
+            "request": {
+              "body": {
+                "post": "String"
+              }
+            },
+            "successResponse": {
+              "status": 201,
+              "body": {
+                "id": "String",
+                "post": "String"
+              }
+            },
+            "errorResponses": [
+              {
+                "code": 400,
+                "message": "Invalid request.",
+                "when": "Request body is invalid or missing required fields."
+              }
+            ]
+          }
+        ]
+      },
+      "folderStructure": {
+        "frontend": {
+          "src": {
+            "components": {},
+            "pages": {},
+            "services": {},
+            "hooks": {},
+            "utils": {}
+          },
+          "public": {}
+        },
+        "backend": {
+          "src": {
+            "controllers": {},
+            "services": {},
+            "routes": {},
+            "middleware": {},
+            "utils": {}
+          },
+          "data": {}
+        },
+        "root": {
+          ".env": "Environment configuration",
+          "README.md": "Project documentation",
+          "package.json": "Project dependencies"
+        }
+      },
+      "developmentRoadmap": [
+        {
+          "phase": "Planning",
+          "timeline": "Week 1",
+          "goal": "Define requirements and architecture.",
+          "tasks": [
+            "Finalize requirements.",
+            "Design architecture."
+          ],
+          "deliverable": "Approved project architecture."
+        },
+        {
+          "phase": "Development",
+          "timeline": "Weeks 2–4",
+          "goal": "Implement the core product.",
+          "tasks": [
+            "Build frontend.",
+            "Build backend APIs.",
+            "Connect database."
+          ],
+          "deliverable": "Working application."
+        },
+        {
+          "phase": "Testing",
+          "timeline": "Week 5",
+          "goal": "Verify functionality and stability.",
+          "tasks": [
+            "Run unit tests.",
+            "Run API tests.",
+            "Fix defects."
+          ],
+          "deliverable": "Tested release candidate."
+        },
+        {
+          "phase": "Deployment",
+          "timeline": "Week 6",
+          "goal": "Prepare the production release.",
+          "tasks": [
+            "Configure environment variables.",
+            "Deploy frontend and backend."
+          ],
+          "deliverable": "Production deployment."
+        }
+      ],
+      "projectOverview": {
+        "problemStatement": "Users need a reliable solution for AI Powered Health and Wellness Coach.",
+        "proposedSolution": "HealthPal is an AI-powered health and wellness coaching platform that provides personalized recommendations and guidance to users. The platform uses machine learning algorithms to analyze user data and provide tailored advice on nutrition, fitness, stress management, and sleep. HealthPal aims to help users achieve their health and wellness goals by providing a holistic approach to wellness, including physical activity, mental well-being, and nutritional balance. The platform will be accessible through a user-friendly web and mobile application, allowing users to track their progress, set goals, and receive personalized coaching.",
+        "projectGoal": "Build a practical and maintainable solution for AI Powered Health and Wellness Coach.",
+        "industry": "Technology",
+        "projectType": "Web Application",
+        "difficulty": "Intermediate",
+        "estimatedDuration": "4–8 weeks",
+        "teamSize": "2–4 developers",
+        "scalability": "The system should support modular scaling as usage grows.",
+        "architecture": "Layered modular architecture"
+      },
+      "description": "HealthPal is an AI-powered health and wellness coaching platform that provides personalized recommendations and guidance to users. The platform uses machine learning algorithms to analyze user data and provide tailored advice on nutrition, fitness, stress management, and sleep. HealthPal aims to help users achieve their health and wellness goals by providing a holistic approach to wellness, including physical activity, mental well-being, and nutritional balance. The platform will be accessible through a user-friendly web and mobile application, allowing users to track their progress, set goals, and receive personalized coaching.",
+      "problemStatement": "Users need a reliable solution for AI Powered Health and Wellness Coach.",
+      "proposedSolution": "HealthPal is an AI-powered health and wellness coaching platform that provides personalized recommendations and guidance to users. The platform uses machine learning algorithms to analyze user data and provide tailored advice on nutrition, fitness, stress management, and sleep. HealthPal aims to help users achieve their health and wellness goals by providing a holistic approach to wellness, including physical activity, mental well-being, and nutritional balance. The platform will be accessible through a user-friendly web and mobile application, allowing users to track their progress, set goals, and receive personalized coaching.",
+      "solution": "HealthPal is an AI-powered health and wellness coaching platform that provides personalized recommendations and guidance to users. The platform uses machine learning algorithms to analyze user data and provide tailored advice on nutrition, fitness, stress management, and sleep. HealthPal aims to help users achieve their health and wellness goals by providing a holistic approach to wellness, including physical activity, mental well-being, and nutritional balance. The platform will be accessible through a user-friendly web and mobile application, allowing users to track their progress, set goals, and receive personalized coaching.",
+      "goal": "Build a practical and maintainable solution for AI Powered Health and Wellness Coach.",
+      "projectGoal": "Build a practical and maintainable solution for AI Powered Health and Wellness Coach.",
+      "industry": "Technology",
+      "projectType": "Web Application",
+      "difficulty": "Intermediate",
+      "duration": "4–8 weeks",
+      "teamSize": "2–4 developers",
+      "architectureStyle": "Layered modular architecture",
+      "scalability": "The system should support modular scaling as usage grows.",
+      "restApis": [
+        {
+          "name": "Health Check",
+          "method": "GET",
+          "endpoint": "/api/health",
+          "description": "Checks whether the API is running.",
+          "authentication": "JWT authentication",
+          "authorization": "Authenticated users with appropriate permissions.",
+          "request": {
+            "body": {},
+            "query": {},
+            "params": {}
+          },
+          "successResponse": {
+            "status": 200,
+            "body": {
+              "success": true
+            }
+          },
+          "errorResponses": [
+            {
+              "code": 400,
+              "message": "Invalid request."
+            },
+            {
+              "code": 500,
+              "message": "Internal server error."
+            }
+          ]
+        },
+        {
+          "name": "Create Resource",
+          "method": "POST",
+          "endpoint": "/api/resource",
+          "description": "Creates a new application resource.",
+          "authentication": "JWT authentication",
+          "authorization": "Authenticated users with appropriate permissions.",
+          "request": {
+            "body": {},
+            "query": {},
+            "params": {}
+          },
+          "successResponse": {
+            "status": 200,
+            "body": {
+              "success": true
+            }
+          },
+          "errorResponses": [
+            {
+              "code": 400,
+              "message": "Invalid request."
+            },
+            {
+              "code": 500,
+              "message": "Internal server error."
+            }
+          ]
+        },
+        {
+          "name": "Get Resources",
+          "method": "GET",
+          "endpoint": "/api/resource",
+          "description": "Returns application resources.",
+          "authentication": "JWT authentication",
+          "authorization": "Authenticated users with appropriate permissions.",
+          "request": {
+            "body": {},
+            "query": {},
+            "params": {}
+          },
+          "successResponse": {
+            "status": 200,
+            "body": {
+              "success": true
+            }
+          },
+          "errorResponses": [
+            {
+              "code": 400,
+              "message": "Invalid request."
+            },
+            {
+              "code": 500,
+              "message": "Internal server error."
+            }
+          ]
+        }
+      ],
+      "architecture": {
+        "type": "Layered modular architecture",
+        "description": "A modular architecture separating presentation, business logic and data access.",
+        "components": [
+          {
+            "name": "Frontend",
+            "responsibility": "Provides the user interface and client-side interactions."
+          },
+          {
+            "name": "Backend API",
+            "responsibility": "Handles business logic and API requests."
+          },
+          {
+            "name": "Database",
+            "responsibility": "Stores persistent application data."
+          }
+        ],
+        "dataFlow": [
+          "User interacts with the frontend.",
+          "Frontend sends an HTTP request to the backend.",
+          "Backend validates the request and executes business logic.",
+          "Backend reads or writes application data.",
+          "The API returns the result to the frontend."
+        ],
+        "frontendArchitecture": "Component-based frontend architecture.",
+        "backendArchitecture": "REST API based backend architecture.",
+        "databaseArchitecture": "Persistent relational or document-oriented data storage.",
+        "authenticationFlow": "User credentials are validated before protected resources are accessed.",
+        "requestFlow": "Client → API → business logic → database → response.",
+        "deploymentArchitecture": "Frontend and backend can be deployed independently.",
+        "scalingStrategy": "Scale API instances horizontally and optimize database access as traffic increases.",
+        "communication": "HTTP/REST communication between frontend and backend."
+      },
+      "testingStrategy": {
+        "unitTesting": [
+          "Test reusable components.",
+          "Test service functions."
+        ],
+        "integrationTesting": [
+          "Test frontend and API integration."
+        ],
+        "apiTesting": [
+          "Test API success and error responses."
+        ],
+        "securityTesting": [
+          "Test authentication and authorization."
+        ],
+        "performanceTesting": [
+          "Test response time under expected load."
+        ]
+      },
+      "deploymentStrategy": {
+        "frontend": "Deploy the frontend to a static hosting platform.",
+        "backend": "Deploy the Node.js/Express API to a server platform.",
+        "database": "Use a managed production database.",
+        "ai": "Store AI provider keys securely on the server.",
+        "environmentVariables": [
+          "GEMINI_API_KEY",
+          "GROQ_API_KEY",
+          "PORT"
+        ]
+      },
+      "projectInsights": {
+        "overallScore": 82,
+        "securityScore": 78,
+        "performanceScore": 80,
+        "maintainabilityScore": 84,
+        "scalabilityScore": 80,
+        "complexityScore": 62,
+        "innovationScore": 76,
+        "businessPotential": 80
+      },
+      "security": [
+        {
+          "title": "Authentication",
+          "description": "Protect private endpoints with authenticated sessions or tokens."
+        },
+        {
+          "title": "Input Validation",
+          "description": "Validate all client-provided input before processing."
+        },
+        {
+          "title": "Secret Management",
+          "description": "Keep API keys and secrets in environment variables."
+        }
+      ],
+      "performanceOptimization": [
+        "Use pagination for large datasets.",
+        "Cache repeated expensive operations.",
+        "Optimize database queries and indexes."
+      ],
+      "bestPractices": [
+        "Keep modules focused and reusable.",
+        "Validate external input.",
+        "Use consistent API responses.",
+        "Write automated tests."
+      ],
+      "futureEnhancements": [
+        "Add advanced analytics.",
+        "Add notification support.",
+        "Improve personalization."
+      ],
+      "deploymentChecklist": [
+        "Configure environment variables.",
+        "Configure production database.",
+        "Deploy backend.",
+        "Deploy frontend.",
+        "Verify production APIs."
+      ],
+      "risks": [
+        {
+          "risk": "Scope growth",
+          "impact": "Can increase development time.",
+          "mitigation": "Prioritize the core MVP before optional features."
+        },
+        {
+          "risk": "Third-party dependency failure",
+          "impact": "External services may become unavailable.",
+          "mitigation": "Use retries, fallbacks and clear error handling."
+        }
+      ],
+      "targetUsers": [],
+      "businessObjectives": [],
+      "projectActions": {
+        "canExportPDF": true,
+        "canSave": true,
+        "canShare": true,
+        "canCopy": true
+      },
+      "techStack": [
+        {
+          "name": "React",
+          "purpose": "Building user interface components."
+        },
+        {
+          "name": "Redux",
+          "purpose": "Managing global state and side effects."
+        },
+        {
+          "name": "Node.js",
+          "purpose": "Building server-side logic and API endpoints."
+        },
+        {
+          "name": "Express",
+          "purpose": "Building RESTful API endpoints."
+        },
+        {
+          "name": "MongoDB",
+          "purpose": "Storing user data and analytics."
+        },
+        {
+          "name": "TensorFlow",
+          "purpose": "Building machine learning models."
+        },
+        {
+          "name": "Git",
+          "purpose": "Version control and collaboration."
+        }
+      ],
+      "database": [
+        {
+          "collection": "users",
+          "purpose": "Stores application users.",
+          "fields": [
+            {
+              "name": "_id",
+              "type": "ObjectId",
+              "required": true,
+              "description": "Unique user identifier."
+            },
+            {
+              "name": "name",
+              "type": "String",
+              "required": true,
+              "description": "User display name."
+            },
+            {
+              "name": "email",
+              "type": "String",
+              "required": true,
+              "description": "Unique user email."
+            }
+          ],
+          "indexes": [],
+          "relationships": []
+        },
+        {
+          "collection": "projects",
+          "purpose": "Stores generated software blueprints.",
+          "fields": [
+            {
+              "name": "_id",
+              "type": "ObjectId",
+              "required": true,
+              "description": "Unique project identifier."
+            },
+            {
+              "name": "idea",
+              "type": "String",
+              "required": true,
+              "description": "Original project idea."
+            },
+            {
+              "name": "project",
+              "type": "Object",
+              "required": true,
+              "description": "Generated blueprint."
+            }
+          ],
+          "indexes": [],
+          "relationships": []
+        }
+      ],
+      "apis": [
+        {
+          "name": "Health Check",
+          "method": "GET",
+          "endpoint": "/api/health",
+          "description": "Checks whether the API is running.",
+          "authentication": "JWT authentication",
+          "authorization": "Authenticated users with appropriate permissions.",
+          "request": {
+            "body": {},
+            "query": {},
+            "params": {}
+          },
+          "successResponse": {
+            "status": 200,
+            "body": {
+              "success": true
+            }
+          },
+          "errorResponses": [
+            {
+              "code": 400,
+              "message": "Invalid request."
+            },
+            {
+              "code": 500,
+              "message": "Internal server error."
+            }
+          ]
+        },
+        {
+          "name": "Create Resource",
+          "method": "POST",
+          "endpoint": "/api/resource",
+          "description": "Creates a new application resource.",
+          "authentication": "JWT authentication",
+          "authorization": "Authenticated users with appropriate permissions.",
+          "request": {
+            "body": {},
+            "query": {},
+            "params": {}
+          },
+          "successResponse": {
+            "status": 200,
+            "body": {
+              "success": true
+            }
+          },
+          "errorResponses": [
+            {
+              "code": 400,
+              "message": "Invalid request."
+            },
+            {
+              "code": 500,
+              "message": "Internal server error."
+            }
+          ]
+        },
+        {
+          "name": "Get Resources",
+          "method": "GET",
+          "endpoint": "/api/resource",
+          "description": "Returns application resources.",
+          "authentication": "JWT authentication",
+          "authorization": "Authenticated users with appropriate permissions.",
+          "request": {
+            "body": {},
+            "query": {},
+            "params": {}
+          },
+          "successResponse": {
+            "status": 200,
+            "body": {
+              "success": true
+            }
+          },
+          "errorResponses": [
+            {
+              "code": 400,
+              "message": "Invalid request."
+            },
+            {
+              "code": 500,
+              "message": "Internal server error."
+            }
+          ]
+        }
+      ],
+      "roadmap": [
+        {
+          "phase": "Planning",
+          "timeline": "Week 1",
+          "goal": "Define requirements and architecture.",
+          "tasks": [
+            "Finalize requirements.",
+            "Design architecture."
+          ],
+          "deliverable": "Approved project architecture."
+        },
+        {
+          "phase": "Development",
+          "timeline": "Weeks 2–4",
+          "goal": "Implement the core product.",
+          "tasks": [
+            "Build frontend.",
+            "Build backend APIs.",
+            "Connect database."
+          ],
+          "deliverable": "Working application."
+        },
+        {
+          "phase": "Testing",
+          "timeline": "Week 5",
+          "goal": "Verify functionality and stability.",
+          "tasks": [
+            "Run unit tests.",
+            "Run API tests.",
+            "Fix defects."
+          ],
+          "deliverable": "Tested release candidate."
+        },
+        {
+          "phase": "Deployment",
+          "timeline": "Week 6",
+          "goal": "Prepare the production release.",
+          "tasks": [
+            "Configure environment variables.",
+            "Deploy frontend and backend."
+          ],
+          "deliverable": "Production deployment."
+        }
+      ],
+      "estimatedDuration": "4–8 weeks",
+      "estimatedTeamSize": "2–4 developers"
+    },
+    "difficulty": "Intermediate",
+    "duration": "4–8 weeks",
+    "favorite": false,
+    "favoriteAt": null,
+    "lastViewedAt": null,
+    "createdAt": "2026-08-12T16:45:40.941Z",
+    "updatedAt": null,
+    "history": [],
+    "versions": []
+  },
+  {
+    "id": "3e825095-cfed-4c08-b6f0-9e8b4f2fb186",
+    "userId": "940f46c2-10f9-4193-80fe-1c76a08bbb6d",
+    "idea": "AI Resume Screening Platform",
+    "project": {
+      "projectName": "AI Resume Screening Platform",
+      "tagline": "Streamlining the hiring process with AI-powered resume screening",
+      "projectDescription": "The AI Resume Screening Platform is designed to revolutionize the hiring process by leveraging artificial intelligence to screen resumes and identify top candidates. The platform will utilize natural language processing and machine learning algorithms to analyze resumes and job descriptions, providing recruiters with a ranked list of candidates whose skills and experience best match the requirements of the position. The platform will also include features such as resume parsing, candidate information extraction, and semantic skill matching, making it an indispensable tool for companies looking to streamline their hiring process and reduce the time and cost associated with recruiting.",
+      "overview": "The AI Resume Screening Platform is designed to revolutionize the hiring process by leveraging artificial intelligence to screen resumes and identify top candidates. The platform will utilize natural language processing and machine learning algorithms to analyze resumes and job descriptions, providing recruiters with a ranked list of candidates whose skills and experience best match the requirements of the position. The platform will also include features such as resume parsing, candidate information extraction, and semantic skill matching, making it an indispensable tool for companies looking to streamline their hiring process and reduce the time and cost associated with recruiting.",
+      "problemStatement": "The current hiring process is often time-consuming and labor-intensive, with recruiters spending hours reviewing resumes and conducting interviews to find the best candidate for a given position. The use of AI-powered resume screening can help to streamline this process, reducing the time and cost associated with recruiting and improving the overall quality of hire.",
+      "proposedSolution": "The AI Resume Screening Platform will use AI to analyze resumes and job descriptions, providing recruiters with a ranked list of candidates whose skills and experience best match the requirements of the position. The platform will also include features such as resume parsing, candidate information extraction, and semantic skill matching, making it an indispensable tool for companies looking to streamline their hiring process and reduce the time and cost associated with recruiting.",
+      "goal": "The goal of the AI Resume Screening Platform is to provide a user-friendly and intuitive platform that uses AI to screen resumes and identify top candidates for a given job description, streamlining the hiring process and reducing the time and cost associated with recruiting.",
+      "industry": "Human Resources",
+      "projectType": "Web Application",
+      "difficulty": "Intermediate",
+      "estimatedDuration": "6 months",
+      "estimatedTeamSize": "5",
+      "architectureStyle": "Microservices",
+      "scalability": "Horizontal",
+      "executiveSummary": "The AI Resume Screening Platform is designed to revolutionize the hiring process by leveraging artificial intelligence to screen resumes and identify top candidates. The platform will utilize natural language processing and machine learning algorithms to analyze resumes and job descriptions, providing recruiters with a ranked list of candidates whose skills and experience best match the requirements of the position. The platform will also include features such as resume parsing, candidate information extraction, and semantic skill matching, making it an indispensable tool for companies looking to streamline their hiring process and reduce the time and cost associated with recruiting.",
+      "features": [
+        {
+          "id": 1,
+          "name": "Resume PDF Parsing",
+          "description": "The ability to parse resumes in PDF format and extract relevant information",
+          "priority": "High",
+          "businessImpact": "Improved accuracy of candidate information",
+          "technicalNotes": "Utilize a PDF parsing library to extract text and metadata from resumes"
+        },
+        {
+          "id": 2,
+          "name": "Candidate Information Extraction",
+          "description": "The ability to extract relevant information from resumes, such as work experience and education",
+          "priority": "High",
+          "businessImpact": "Improved accuracy of candidate information",
+          "technicalNotes": "Utilize natural language processing to extract relevant information from resumes"
+        },
+        {
+          "id": 3,
+          "name": "Job Description Analysis",
+          "description": "The ability to analyze job descriptions and extract relevant keywords and requirements",
+          "priority": "High",
+          "businessImpact": "Improved accuracy of job description analysis",
+          "technicalNotes": "Utilize natural language processing to extract relevant keywords and requirements from job descriptions"
+        },
+        {
+          "id": 4,
+          "name": "Semantic Skill Matching",
+          "description": "The ability to match candidate skills with job requirements using semantic analysis",
+          "priority": "Medium",
+          "businessImpact": "Improved accuracy of candidate matching",
+          "technicalNotes": "Utilize machine learning algorithms to match candidate skills with job requirements"
+        },
+        {
+          "id": 5,
+          "name": "ATS Scoring",
+          "description": "The ability to score candidates based on their resume and job description match",
+          "priority": "High",
+          "businessImpact": "Improved accuracy of candidate scoring",
+          "technicalNotes": "Utilize machine learning algorithms to score candidates based on their resume and job description match"
+        },
+        {
+          "id": 6,
+          "name": "Candidate Ranking",
+          "description": "The ability to rank candidates based on their score and other relevant factors",
+          "priority": "High",
+          "businessImpact": "Improved accuracy of candidate ranking",
+          "technicalNotes": "Utilize machine learning algorithms to rank candidates based on their score and other relevant factors"
+        },
+        {
+          "id": 7,
+          "name": "Missing Skill Detection",
+          "description": "The ability to detect missing skills in candidates and provide recommendations for improvement",
+          "priority": "Medium",
+          "businessImpact": "Improved candidate development",
+          "technicalNotes": "Utilize machine learning algorithms to detect missing skills in candidates and provide recommendations for improvement"
+        },
+        {
+          "id": 8,
+          "name": "Recruiter Analytics",
+          "description": "The ability to provide recruiters with analytics and insights on candidate performance and hiring trends",
+          "priority": "Medium",
+          "businessImpact": "Improved recruiter decision-making",
+          "technicalNotes": "Utilize data visualization and machine learning algorithms to provide recruiters with analytics and insights on candidate performance and hiring trends"
+        }
+      ],
+      "technologyStack": {
+        "frontend": [
+          {
+            "name": "React",
+            "purpose": "Frontend framework"
+          },
+          {
+            "name": "Redux",
+            "purpose": "State management"
+          }
+        ],
+        "backend": [
+          {
+            "name": "Node.js",
+            "purpose": "Backend framework"
+          },
+          {
+            "name": "Express",
+            "purpose": "Web framework"
+          }
+        ],
+        "database": [
+          {
+            "name": "MongoDB",
+            "purpose": "NoSQL database"
+          }
+        ],
+        "authentication": [],
+        "ai": [
+          {
+            "name": "TensorFlow",
+            "purpose": "Machine learning framework"
+          }
+        ],
+        "storage": [],
+        "deployment": [],
+        "testing": [],
+        "devops": [],
+        "monitoring": [],
+        "devTools": [
+          {
+            "name": "Git",
+            "purpose": "Version control"
+          }
+        ]
+      },
+      "systemArchitecture": {
+        "type": "Microservices",
+        "description": "The system architecture is designed as a microservices-based system, with each component providing a specific functionality and communicating with other components through APIs",
+        "components": [
+          {
+            "name": "Resume Parser",
+            "responsibility": "Parse resumes and extract relevant information",
+            "technology": "Node.js and PDF parsing library",
+            "dependencies": [
+              "Resume Database"
+            ],
+            "scalability": "Horizontal",
+            "security": "Data encryption and secure authentication"
+          },
+          {
+            "name": "Job Description Analyzer",
+            "responsibility": "Analyze job descriptions and extract relevant keywords and requirements",
+            "technology": "Node.js and natural language processing library",
+            "dependencies": [
+              "Job Description Database"
+            ],
+            "scalability": "Horizontal",
+            "security": "Data encryption and secure authentication"
+          }
+        ],
+        "dataFlow": "The data flow is designed as follows: 1) Resume is uploaded to the Resume Parser component, 2) Resume Parser extracts relevant information and stores it in the Resume Database, 3) Job Description is uploaded to the Job Description Analyzer component, 4) Job Description Analyzer extracts relevant keywords and requirements and stores them in the Job Description Database, 5) Candidate matching is performed by the Candidate Matcher component, which retrieves data from the Resume Database and Job Description Database and uses machine learning algorithms to match candidates with job descriptions"
+      },
+      "databaseDesign": [
+        {
+          "collection": "users",
+          "purpose": "Stores application users.",
+          "fields": [
+            {
+              "name": "_id",
+              "type": "ObjectId",
+              "required": true,
+              "description": "Unique user identifier."
+            },
+            {
+              "name": "name",
+              "type": "String",
+              "required": true,
+              "description": "User display name."
+            },
+            {
+              "name": "email",
+              "type": "String",
+              "required": true,
+              "description": "Unique user email."
+            }
+          ],
+          "indexes": [],
+          "relationships": []
+        },
+        {
+          "collection": "projects",
+          "purpose": "Stores generated software blueprints.",
+          "fields": [
+            {
+              "name": "_id",
+              "type": "ObjectId",
+              "required": true,
+              "description": "Unique project identifier."
+            },
+            {
+              "name": "idea",
+              "type": "String",
+              "required": true,
+              "description": "Original project idea."
+            },
+            {
+              "name": "project",
+              "type": "Object",
+              "required": true,
+              "description": "Generated blueprint."
+            }
+          ],
+          "indexes": [],
+          "relationships": []
+        }
+      ],
+      "restApiDesign": {
+        "endpoints": [
+          {
+            "name": "Upload Resume",
+            "method": "POST",
+            "endpoint": "/resumes",
+            "description": "Upload a resume and extract relevant information",
+            "authentication": "Bearer token",
+            "authorization": "Admin or Recruiter",
+            "headers": {
+              "Content-Type": "application/pdf"
+            },
+            "queryParameters": {},
+            "pathParameters": {},
+            "request": {
+              "body": {
+                "resume": "Resume file"
+              },
+              "example": {
+                "resume": "example.pdf"
+              }
+            },
+            "successResponse": {
+              "status": 201,
+              "body": {
+                "resumeId": "Unique identifier for the resume"
+              }
+            },
+            "errorResponses": [
+              {
+                "code": 400,
+                "message": "Invalid resume file",
+                "when": "Resume file is not a valid PDF"
+              }
+            ]
+          },
+          {
+            "name": "Get Resume",
+            "method": "GET",
+            "endpoint": "/resumes/{resumeId}",
+            "description": "Retrieve a resume by ID",
+            "authentication": "Bearer token",
+            "authorization": "Admin or Recruiter",
+            "headers": {},
+            "queryParameters": {},
+            "pathParameters": {
+              "resumeId": "Unique identifier for the resume"
+            },
+            "request": {},
+            "successResponse": {
+              "status": 200,
+              "body": {
+                "resume": "Resume file"
+              }
+            },
+            "errorResponses": [
+              {
+                "code": 404,
+                "message": "Resume not found",
+                "when": "Resume ID is not valid"
+              }
+            ]
+          }
+        ]
+      },
+      "folderStructure": {
+        "frontend": {
+          "src": {
+            "components": {},
+            "pages": {},
+            "services": {},
+            "hooks": {},
+            "utils": {}
+          },
+          "public": {}
+        },
+        "backend": {
+          "src": {
+            "controllers": {},
+            "services": {},
+            "routes": {},
+            "middleware": {},
+            "utils": {}
+          },
+          "data": {}
+        },
+        "root": {
+          ".env": "Environment configuration",
+          "README.md": "Project documentation",
+          "package.json": "Project dependencies"
+        }
+      },
+      "developmentRoadmap": [
+        {
+          "phase": "Planning",
+          "timeline": "Week 1",
+          "goal": "Define requirements and architecture.",
+          "tasks": [
+            "Finalize requirements.",
+            "Design architecture."
+          ],
+          "deliverable": "Approved project architecture."
+        },
+        {
+          "phase": "Development",
+          "timeline": "Weeks 2–4",
+          "goal": "Implement the core product.",
+          "tasks": [
+            "Build frontend.",
+            "Build backend APIs.",
+            "Connect database."
+          ],
+          "deliverable": "Working application."
+        },
+        {
+          "phase": "Testing",
+          "timeline": "Week 5",
+          "goal": "Verify functionality and stability.",
+          "tasks": [
+            "Run unit tests.",
+            "Run API tests.",
+            "Fix defects."
+          ],
+          "deliverable": "Tested release candidate."
+        },
+        {
+          "phase": "Deployment",
+          "timeline": "Week 6",
+          "goal": "Prepare the production release.",
+          "tasks": [
+            "Configure environment variables.",
+            "Deploy frontend and backend."
+          ],
+          "deliverable": "Production deployment."
+        }
+      ],
+      "testingStrategy": {
+        "unitTesting": [
+          "Test reusable components.",
+          "Test service functions."
+        ],
+        "integrationTesting": [
+          "Test frontend and API integration."
+        ],
+        "apiTesting": [
+          "Test API success and error responses."
+        ],
+        "securityTesting": [
+          "Test authentication and authorization."
+        ],
+        "performanceTesting": [
+          "Test response time under expected load."
+        ]
+      },
+      "deploymentStrategy": {
+        "frontend": "Deploy to cloud hosting platform",
+        "backend": "Deploy to cloud hosting platform",
+        "database": "Deploy to cloud database platform",
+        "ai": "Deploy to cloud AI platform",
+        "environmentVariables": [
+          "GEMINI_API_KEY",
+          "GROQ_API_KEY",
+          "PORT"
+        ]
+      },
+      "security": [
+        {
+          "title": "Authentication",
+          "description": "Protect private endpoints with authenticated sessions or tokens."
+        },
+        {
+          "title": "Input Validation",
+          "description": "Validate all client-provided input before processing."
+        },
+        {
+          "title": "Secret Management",
+          "description": "Keep API keys and secrets in environment variables."
+        }
+      ],
+      "performance": {
+        "caching": "Implement caching to improve system performance",
+        "databaseIndexes": "Optimize database indexes for faster query performance",
+        "pagination": "Implement pagination to reduce data transfer and improve system performance",
+        "asynchronousProcessing": "Use asynchronous processing to improve system responsiveness",
+        "aiRequestOptimization": "Optimize AI requests to reduce latency and improve system performance"
+      },
+      "bestPractices": [
+        "Keep modules focused and reusable.",
+        "Validate external input.",
+        "Use consistent API responses.",
+        "Write automated tests."
+      ],
+      "futureEnhancements": [
+        "Add advanced analytics.",
+        "Add notification support.",
+        "Improve personalization."
+      ],
+      "risks": [
+        {
+          "risk": "Scope growth",
+          "impact": "Can increase development time.",
+          "mitigation": "Prioritize the core MVP before optional features."
+        },
+        {
+          "risk": "Third-party dependency failure",
+          "impact": "External services may become unavailable.",
+          "mitigation": "Use retries, fallbacks and clear error handling."
+        }
+      ],
+      "aiProjectInsights": {
+        "overallScore": 80,
+        "securityScore": 90,
+        "performanceScore": 85,
+        "maintainabilityScore": 80,
+        "scalabilityScore": 85,
+        "complexityScore": 70,
+        "innovationScore": 90,
+        "businessPotential": 95
+      },
+      "projectActions": {
+        "canExportPDF": true,
+        "canSave": true,
+        "canShare": true,
+        "canCopy": true
+      },
+      "projectOverview": {
+        "problemStatement": "The current hiring process is often time-consuming and labor-intensive, with recruiters spending hours reviewing resumes and conducting interviews to find the best candidate for a given position. The use of AI-powered resume screening can help to streamline this process, reducing the time and cost associated with recruiting and improving the overall quality of hire.",
+        "proposedSolution": "The AI Resume Screening Platform will use AI to analyze resumes and job descriptions, providing recruiters with a ranked list of candidates whose skills and experience best match the requirements of the position. The platform will also include features such as resume parsing, candidate information extraction, and semantic skill matching, making it an indispensable tool for companies looking to streamline their hiring process and reduce the time and cost associated with recruiting.",
+        "projectGoal": "The goal of the AI Resume Screening Platform is to provide a user-friendly and intuitive platform that uses AI to screen resumes and identify top candidates for a given job description, streamlining the hiring process and reducing the time and cost associated with recruiting.",
+        "industry": "Human Resources",
+        "projectType": "Web Application",
+        "difficulty": "Intermediate",
+        "estimatedDuration": "6 months",
+        "teamSize": "5",
+        "scalability": "Horizontal",
+        "architecture": "Microservices"
+      },
+      "description": "The AI Resume Screening Platform is designed to revolutionize the hiring process by leveraging artificial intelligence to screen resumes and identify top candidates. The platform will utilize natural language processing and machine learning algorithms to analyze resumes and job descriptions, providing recruiters with a ranked list of candidates whose skills and experience best match the requirements of the position. The platform will also include features such as resume parsing, candidate information extraction, and semantic skill matching, making it an indispensable tool for companies looking to streamline their hiring process and reduce the time and cost associated with recruiting.",
+      "solution": "The AI Resume Screening Platform will use AI to analyze resumes and job descriptions, providing recruiters with a ranked list of candidates whose skills and experience best match the requirements of the position. The platform will also include features such as resume parsing, candidate information extraction, and semantic skill matching, making it an indispensable tool for companies looking to streamline their hiring process and reduce the time and cost associated with recruiting.",
+      "projectGoal": "The goal of the AI Resume Screening Platform is to provide a user-friendly and intuitive platform that uses AI to screen resumes and identify top candidates for a given job description, streamlining the hiring process and reducing the time and cost associated with recruiting.",
+      "duration": "6 months",
+      "teamSize": "5",
+      "restApis": [
+        {
+          "name": "Health Check",
+          "method": "GET",
+          "endpoint": "/api/health",
+          "description": "Checks whether the API is running.",
+          "authentication": "JWT authentication",
+          "authorization": "Authenticated users with appropriate permissions.",
+          "request": {
+            "body": {},
+            "query": {},
+            "params": {}
+          },
+          "successResponse": {
+            "status": 200,
+            "body": {
+              "success": true
+            }
+          },
+          "errorResponses": [
+            {
+              "code": 400,
+              "message": "Invalid request."
+            },
+            {
+              "code": 500,
+              "message": "Internal server error."
+            }
+          ]
+        },
+        {
+          "name": "Create Resource",
+          "method": "POST",
+          "endpoint": "/api/resource",
+          "description": "Creates a new application resource.",
+          "authentication": "JWT authentication",
+          "authorization": "Authenticated users with appropriate permissions.",
+          "request": {
+            "body": {},
+            "query": {},
+            "params": {}
+          },
+          "successResponse": {
+            "status": 200,
+            "body": {
+              "success": true
+            }
+          },
+          "errorResponses": [
+            {
+              "code": 400,
+              "message": "Invalid request."
+            },
+            {
+              "code": 500,
+              "message": "Internal server error."
+            }
+          ]
+        },
+        {
+          "name": "Get Resources",
+          "method": "GET",
+          "endpoint": "/api/resource",
+          "description": "Returns application resources.",
+          "authentication": "JWT authentication",
+          "authorization": "Authenticated users with appropriate permissions.",
+          "request": {
+            "body": {},
+            "query": {},
+            "params": {}
+          },
+          "successResponse": {
+            "status": 200,
+            "body": {
+              "success": true
+            }
+          },
+          "errorResponses": [
+            {
+              "code": 400,
+              "message": "Invalid request."
+            },
+            {
+              "code": 500,
+              "message": "Internal server error."
+            }
+          ]
+        }
+      ],
+      "architecture": {
+        "type": "Microservices",
+        "description": "A modular architecture separating presentation, business logic and data access.",
+        "components": [
+          {
+            "name": "Frontend",
+            "responsibility": "Provides the user interface and client-side interactions."
+          },
+          {
+            "name": "Backend API",
+            "responsibility": "Handles business logic and API requests."
+          },
+          {
+            "name": "Database",
+            "responsibility": "Stores persistent application data."
+          }
+        ],
+        "dataFlow": [
+          "User interacts with the frontend.",
+          "Frontend sends an HTTP request to the backend.",
+          "Backend validates the request and executes business logic.",
+          "Backend reads or writes application data.",
+          "The API returns the result to the frontend."
+        ],
+        "frontendArchitecture": "Component-based frontend architecture.",
+        "backendArchitecture": "REST API based backend architecture.",
+        "databaseArchitecture": "Persistent relational or document-oriented data storage.",
+        "authenticationFlow": "User credentials are validated before protected resources are accessed.",
+        "requestFlow": "Client → API → business logic → database → response.",
+        "deploymentArchitecture": "Frontend and backend can be deployed independently.",
+        "scalingStrategy": "Scale API instances horizontally and optimize database access as traffic increases.",
+        "communication": "HTTP/REST communication between frontend and backend."
+      },
+      "projectInsights": {
+        "overallScore": 82,
+        "securityScore": 78,
+        "performanceScore": 80,
+        "maintainabilityScore": 84,
+        "scalabilityScore": 80,
+        "complexityScore": 62,
+        "innovationScore": 76,
+        "businessPotential": 80
+      },
+      "performanceOptimization": [
+        "Use pagination for large datasets.",
+        "Cache repeated expensive operations.",
+        "Optimize database queries and indexes."
+      ],
+      "deploymentChecklist": [
+        "Configure environment variables.",
+        "Configure production database.",
+        "Deploy backend.",
+        "Deploy frontend.",
+        "Verify production APIs."
+      ],
+      "targetUsers": [],
+      "businessObjectives": [],
+      "techStack": [
+        {
+          "name": "React",
+          "purpose": "Frontend framework"
+        },
+        {
+          "name": "Redux",
+          "purpose": "State management"
+        },
+        {
+          "name": "Node.js",
+          "purpose": "Backend framework"
+        },
+        {
+          "name": "Express",
+          "purpose": "Web framework"
+        },
+        {
+          "name": "MongoDB",
+          "purpose": "NoSQL database"
+        },
+        {
+          "name": "TensorFlow",
+          "purpose": "Machine learning framework"
+        },
+        {
+          "name": "Git",
+          "purpose": "Version control"
+        }
+      ],
+      "database": [
+        {
+          "collection": "users",
+          "purpose": "Stores application users.",
+          "fields": [
+            {
+              "name": "_id",
+              "type": "ObjectId",
+              "required": true,
+              "description": "Unique user identifier."
+            },
+            {
+              "name": "name",
+              "type": "String",
+              "required": true,
+              "description": "User display name."
+            },
+            {
+              "name": "email",
+              "type": "String",
+              "required": true,
+              "description": "Unique user email."
+            }
+          ],
+          "indexes": [],
+          "relationships": []
+        },
+        {
+          "collection": "projects",
+          "purpose": "Stores generated software blueprints.",
+          "fields": [
+            {
+              "name": "_id",
+              "type": "ObjectId",
+              "required": true,
+              "description": "Unique project identifier."
+            },
+            {
+              "name": "idea",
+              "type": "String",
+              "required": true,
+              "description": "Original project idea."
+            },
+            {
+              "name": "project",
+              "type": "Object",
+              "required": true,
+              "description": "Generated blueprint."
+            }
+          ],
+          "indexes": [],
+          "relationships": []
+        }
+      ],
+      "apis": [
+        {
+          "name": "Health Check",
+          "method": "GET",
+          "endpoint": "/api/health",
+          "description": "Checks whether the API is running.",
+          "authentication": "JWT authentication",
+          "authorization": "Authenticated users with appropriate permissions.",
+          "request": {
+            "body": {},
+            "query": {},
+            "params": {}
+          },
+          "successResponse": {
+            "status": 200,
+            "body": {
+              "success": true
+            }
+          },
+          "errorResponses": [
+            {
+              "code": 400,
+              "message": "Invalid request."
+            },
+            {
+              "code": 500,
+              "message": "Internal server error."
+            }
+          ]
+        },
+        {
+          "name": "Create Resource",
+          "method": "POST",
+          "endpoint": "/api/resource",
+          "description": "Creates a new application resource.",
+          "authentication": "JWT authentication",
+          "authorization": "Authenticated users with appropriate permissions.",
+          "request": {
+            "body": {},
+            "query": {},
+            "params": {}
+          },
+          "successResponse": {
+            "status": 200,
+            "body": {
+              "success": true
+            }
+          },
+          "errorResponses": [
+            {
+              "code": 400,
+              "message": "Invalid request."
+            },
+            {
+              "code": 500,
+              "message": "Internal server error."
+            }
+          ]
+        },
+        {
+          "name": "Get Resources",
+          "method": "GET",
+          "endpoint": "/api/resource",
+          "description": "Returns application resources.",
+          "authentication": "JWT authentication",
+          "authorization": "Authenticated users with appropriate permissions.",
+          "request": {
+            "body": {},
+            "query": {},
+            "params": {}
+          },
+          "successResponse": {
+            "status": 200,
+            "body": {
+              "success": true
+            }
+          },
+          "errorResponses": [
+            {
+              "code": 400,
+              "message": "Invalid request."
+            },
+            {
+              "code": 500,
+              "message": "Internal server error."
+            }
+          ]
+        }
+      ],
+      "roadmap": [
+        {
+          "phase": "Planning",
+          "timeline": "Week 1",
+          "goal": "Define requirements and architecture.",
+          "tasks": [
+            "Finalize requirements.",
+            "Design architecture."
+          ],
+          "deliverable": "Approved project architecture."
+        },
+        {
+          "phase": "Development",
+          "timeline": "Weeks 2–4",
+          "goal": "Implement the core product.",
+          "tasks": [
+            "Build frontend.",
+            "Build backend APIs.",
+            "Connect database."
+          ],
+          "deliverable": "Working application."
+        },
+        {
+          "phase": "Testing",
+          "timeline": "Week 5",
+          "goal": "Verify functionality and stability.",
+          "tasks": [
+            "Run unit tests.",
+            "Run API tests.",
+            "Fix defects."
+          ],
+          "deliverable": "Tested release candidate."
+        },
+        {
+          "phase": "Deployment",
+          "timeline": "Week 6",
+          "goal": "Prepare the production release.",
+          "tasks": [
+            "Configure environment variables.",
+            "Deploy frontend and backend."
+          ],
+          "deliverable": "Production deployment."
+        }
+      ]
+    },
+    "difficulty": "Intermediate",
+    "duration": "6 months",
+    "favorite": false,
+    "favoriteAt": null,
+    "lastViewedAt": null,
+    "createdAt": "2026-08-12T19:41:03.377Z",
+    "updatedAt": null,
+    "history": [],
+    "versions": []
+  }
+]
