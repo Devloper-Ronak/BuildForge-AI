@@ -364,6 +364,32 @@ The PDF export engine in `backend/src/controllers/exportController.js` is built 
 
 ---
 
+## 👥 Team & Developers
+
+BuildForge AI is designed and developed by:
+
+### 👨‍💻 Ronak Khan
+
+Computer Science & Engineering Student and Full-Stack Developer.
+
+| Platform | Contact |
+| :--- | :--- |
+| 📧 Email | [ronakkhan60966@gmail.com](mailto:ronakkhan60966@gmail.com) |
+| 💼 LinkedIn | [Ronak Khan](https://www.linkedin.com/in/ronak-khan-587ba232/) |
+| 🌐 GitHub | [Devloper-Ronak](https://github.com/Devloper-Ronak) |
+
+### 👨‍💻 Ali Noor
+
+Computer Science & Engineering Student and Developer.
+
+| Platform | Contact |
+| :--- | :--- |
+| 📧 Email | [alinoor73027@gmail.com](mailto:alinoor73027@gmail.com) |
+| 💼 LinkedIn | [Ali Noor](https://www.linkedin.com/in/ali-noor-86b414343/) |
+| 🌐 GitHub | [Ali73027](https://github.com/Ali73027) |
+
+---
+
 ## 🚀 Deployment & Live Demo
 
 <p align="center">
