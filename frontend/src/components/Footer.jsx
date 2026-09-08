@@ -10,34 +10,82 @@ function Footer() {
           alignItems: "center",
         }}
       >
-        <div className="footer-logo" style={{ margin: "0 auto 25px auto" }}>
+        {/* Logo */}
+        <div
+          className="footer-logo"
+          style={{
+            margin: "0 auto 25px auto",
+            textAlign: "center",
+          }}
+        >
           🚀 BuildForge AI
         </div>
 
-        <h2 style={{ textAlign: "center", margin: "0 auto 18px auto", width: "100%" }}>
+        {/* Heading */}
+        <h2
+          style={{
+            textAlign: "center",
+            margin: "0 auto 18px auto",
+            width: "100%",
+          }}
+        >
           AI-Powered Software Architecture
-          <span style={{ textAlign: "center", display: "block", margin: "10px auto 0 auto" }}>
+
+          <span
+            style={{
+              textAlign: "center",
+              display: "block",
+              margin: "10px auto 0 auto",
+            }}
+          >
             Built for Modern Developers
           </span>
         </h2>
 
-        <p style={{ textAlign: "center", margin: "0 auto 45px auto", maxWidth: "760px" }}>
+        {/* Description */}
+        <p
+          style={{
+            textAlign: "center",
+            margin: "0 auto 45px auto",
+            maxWidth: "760px",
+          }}
+        >
           BuildForge AI transforms innovative ideas into complete,
           production-ready software projects with intelligent architecture,
           scalable databases, API planning, and AI-powered development
           roadmaps.
         </p>
 
-        <div className="footer-links" style={{ display: "flex", justifyContent: "center", gap: "45px" }}>
+        {/* Links */}
+        <div
+          className="footer-links"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "45px",
+          }}
+        >
           <a href="#features">Features</a>
+
           <a href="#about">About</a>
+
           <a href="#contact">Contact</a>
         </div>
 
+        {/* Divider */}
         <div className="footer-divider"></div>
 
-        <span className="copyright" style={{ textAlign: "center", display: "block" }}>
-          © 2026 BuildForge AI · Designed & Developed by Ronak Khan
+        {/* Copyright */}
+        <span
+          className="copyright"
+          style={{
+            textAlign: "center",
+            display: "block",
+          }}
+        >
+          © 2026 BuildForge AI · Designed &amp; Developed by{" "}
+          <strong>Ronak Khan &amp; Ali Noor</strong>
         </span>
       </div>
     </footer>

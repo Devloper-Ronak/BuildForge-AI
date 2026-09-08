@@ -8462,7 +8462,6 @@ PROJECT DETAILS
 }
 
 
-
 /* =====================================================
                 RESPONSIVE
 ===================================================== */
@@ -8969,4 +8968,199 @@ PROJECT DETAILS
     transform: translateY(-8px);
     border-color: #7c5cff;
     box-shadow: 0 0 25px rgba(124, 92, 255, .25), 0 0 50px rgba(0, 212, 255, .12);
+}
+
+
+/* =========================================================
+   BUILDFORGE AI TEAM SECTION
+   ========================================================= */
+
+.team-members {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.team-member-card {
+    box-sizing: border-box;
+    padding: 32px 25px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(100, 150, 255, 0.35);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ================= MEMBER INFORMATION ================= */
+
+.team-member-info {
+    margin-bottom: 28px;
+}
+
+.team-avatar {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    border-radius: 50%;
+    font-size: 17px;
+    font-weight: 800;
+    border: 1px solid rgba(100, 150, 255, 0.35);
+    background: rgba(50, 100, 255, 0.10);
+}
+
+.team-member-info h3 {
+    margin: 0;
+    font-size: 21px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.team-member-info p {
+    margin: 6px 0 0;
+    font-size: 13px;
+    opacity: 0.65;
+    text-align: center;
+}
+
+
+/* ================= CONTACT BOXES ================= */
+
+.team-contact-grid {
+    width: 100%;
+}
+
+.team-contact-box {
+    box-sizing: border-box;
+    min-width: 0;
+    min-height: 135px;
+    padding: 18px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+.team-contact-box:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(100, 150, 255, 0.35);
+}
+
+
+/* ================= ICON ================= */
+
+.team-contact-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 9px;
+    border-radius: 50%;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(100, 150, 255, 0.25);
+}
+
+
+/* ================= CONTACT TITLE ================= */
+
+.team-contact-box h4 {
+    margin: 0 0 6px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+/* ================= CONTACT TEXT ================= */
+
+.team-contact-box p {
+    width: 100%;
+    margin: 0;
+    font-size: 10px;
+    line-height: 1.4;
+    opacity: 0.65;
+    text-align: center;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+
+/* =========================================================
+   ABOUT HEADING
+   ========================================================= */
+
+.about-card h2 {
+    width: 100%;
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-card h2 span {
+    display: block !important;
+    width: 100%;
+    margin-top: 8px;
+    text-align: center !important;
+}
+
+
+/* =========================================================
+   CONTACT HEADING
+   ========================================================= */
+
+.contact-card .about-title {
+    width: 100%;
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-card .about-title span {
+    display: block !important;
+    width: 100%;
+    text-align: center !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+    .team-members {
+        grid-template-columns: 1fr !important;
+        max-width: 650px;
+    }
+}
+
+@media (max-width: 600px) {
+    .team-member-card {
+        padding: 25px 15px;
+    }
+    .team-contact-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .team-contact-box {
+        min-height: 105px;
+    }
+    .team-member-info h3 {
+        font-size: 19px;
+    }
 }

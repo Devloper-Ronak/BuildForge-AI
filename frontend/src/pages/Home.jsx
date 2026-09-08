@@ -12,6 +12,7 @@ function Home() {
     if (location.hash) {
       const targetId = location.hash.replace("#", "");
       const elem = document.getElementById(targetId);
+
       if (elem) {
         setTimeout(() => {
           elem.scrollIntoView({ behavior: "smooth" });
@@ -19,6 +20,23 @@ function Home() {
       }
     }
   }, [location]);
+
+  const teamMembers = [
+    {
+      name: "Ronak Khan",
+      initials: "RK",
+      email: "ronakkhan60966@gmail.com",
+      linkedin: "https://www.linkedin.com/in/ronak-khan-587ba2328/",
+      github: "https://github.com/Devloper-Ronak",
+    },
+    {
+      name: "Ali Noor",
+      initials: "AN",
+      email: "alinoor73027@gmail.com",
+      linkedin: "https://www.linkedin.com/in/ali-noor-86b414343/",
+      github: "https://github.com/Ali73027",
+    },
+  ];
 
   return (
     <>
@@ -28,23 +46,49 @@ function Home() {
 
       <Features />
 
-      {/* About Section */}
+      {/* ================= ABOUT SECTION ================= */}
       <section id="about" className="about-section">
-        <div className="about-card" style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <div className="about-badge">
-            ABOUT BUILDFORGE AI
-          </div>
+        <div
+          className="about-card"
+          style={{
+            textAlign: "center",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <div className="about-badge">ABOUT BUILDFORGE AI</div>
 
-          <h2 style={{ textAlign: "center" }}>
+          <h2
+            style={{
+              textAlign: "center",
+              width: "100%",
+              margin: "0 auto 25px auto",
+            }}
+          >
             Build Better Software
-            <span>With Artificial Intelligence</span>
+            <span
+              style={{
+                display: "block",
+                textAlign: "center",
+                marginTop: "8px",
+              }}
+            >
+              With Artificial Intelligence
+            </span>
           </h2>
 
-          <p style={{ textAlign: "center", margin: "0 auto" }}>
-            BuildForge AI empowers students, developers, and startups to transform
-            simple ideas into complete software projects with intelligent
-            architecture, scalable database design, API planning, and
-            implementation roadmaps—all within seconds.
+          <p
+            style={{
+              textAlign: "center",
+              margin: "0 auto",
+              maxWidth: "800px",
+            }}
+          >
+            BuildForge AI empowers students, developers, and startups to
+            transform simple ideas into complete software projects with
+            intelligent architecture, scalable database design, API planning,
+            and implementation roadmaps—all within seconds.
           </p>
 
           <div className="about-stats" style={{ width: "100%" }}>
@@ -66,57 +110,143 @@ function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* ================= CONTACT SECTION ================= */}
       <section id="contact" className="contact-section">
-        <div className="contact-card" style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <div className="contact-badge">
-            GET IN TOUCH
-          </div>
+        <div
+          className="contact-card"
+          style={{
+            textAlign: "center",
+            width: "100%",
+          }}
+        >
+          <div className="contact-badge">GET IN TOUCH</div>
 
-          <h2 className="about-title" style={{ textAlign: "center" }}>
+          <h2
+            className="about-title"
+            style={{
+              textAlign: "center",
+              width: "100%",
+              margin: "0 auto 20px auto",
+            }}
+          >
             Let's Build Something
-            <span>Amazing Together</span>
-          </h2>
-
-          <p style={{ textAlign: "center", margin: "0 auto" }}>
-            Have a question, a project idea, or want to collaborate?
-            Feel free to reach out through any of the platforms below.
-          </p>
-
-          <div className="contact-info" style={{ width: "100%", justifyContent: "center" }}>
-            <div
-              className="contact-box"
-              onClick={() => {
-                navigator.clipboard.writeText("ronakkhan60966@gmail.com");
-                alert("Email copied successfully!");
+            <span
+              style={{
+                display: "block",
+                textAlign: "center",
+                marginTop: "8px",
               }}
             >
-              <span>📧</span>
-              <h3>Email Support</h3>
-              <p>ronakkhan60966@gmail.com</p>
-            </div>
+              Amazing Together
+            </span>
+          </h2>
 
-            <a
-              href="https://www.linkedin.com/in/ronak-khan-587ba2328/"
-              target="_blank"
-              rel="noreferrer"
-              className="contact-box"
-            >
-              <span>💼</span>
-              <h3>LinkedIn</h3>
-              <p>Connect Professionally</p>
-            </a>
+          <p
+            style={{
+              textAlign: "center",
+              margin: "0 auto 45px auto",
+              maxWidth: "750px",
+            }}
+          >
+            Have a question, a project idea, or want to collaborate?
+            Feel free to reach out to our team through any of the platforms
+            below.
+          </p>
 
-            <a
-              href="https://github.com/Devloper-Ronak"
-              target="_blank"
-              rel="noreferrer"
-              className="contact-box"
-            >
-              <span>🌐</span>
-              <h3>GitHub</h3>
-              <p>Explore Open Source Projects</p>
-            </a>
+          {/* ================= TEAM MEMBERS ================= */}
+          <div
+            className="team-members"
+            style={{
+              width: "100%",
+              maxWidth: "1100px",
+              margin: "0 auto",
+              display: "grid",
+              gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+              gap: "30px",
+            }}
+          >
+            {teamMembers.map((member) => (
+              <div
+                className="team-member-card"
+                key={member.name}
+                style={{
+                  width: "100%",
+                  textAlign: "center",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                }}
+              >
+                {/* Member Name */}
+                <div
+                  className="team-member-info"
+                  style={{
+                    width: "100%",
+                    textAlign: "center",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                  }}
+                >
+                  <div className="team-avatar">{member.initials}</div>
+
+                  <h3>{member.name}</h3>
+
+                  <p>BuildForge AI Team</p>
+                </div>
+
+                {/* Contact Cards */}
+                <div
+                  className="team-contact-grid"
+                  style={{
+                    width: "100%",
+                    display: "grid",
+                    gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+                    gap: "12px",
+                  }}
+                >
+                  {/* EMAIL */}
+                  <a
+                    href={`mailto:${member.email}`}
+                    className="team-contact-box"
+                  >
+                    <span className="team-contact-icon">📧</span>
+
+                    <h4>Email</h4>
+
+                    <p>{member.email}</p>
+                  </a>
+
+                  {/* LINKEDIN */}
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="team-contact-box"
+                  >
+                    <span className="team-contact-icon">💼</span>
+
+                    <h4>LinkedIn</h4>
+
+                    <p>Connect Professionally</p>
+                  </a>
+
+                  {/* GITHUB */}
+                  <a
+                    href={member.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="team-contact-box"
+                  >
+                    <span className="team-contact-icon">🌐</span>
+
+                    <h4>GitHub</h4>
+
+                    <p>Explore Projects</p>
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -21,25 +21,22 @@ securityMiddleware(app);
 // Allowed origins configuration
 const allowedOrigins = [
     "http://localhost:5173",
-    "http://localhost:3000",
-    "https://build-forge-ai-eight.vercel.app",
-    "https://buildforge-ai-backend.onrender.com"
+    "https://build-forge-ai-eight-nu.vercel.app",
+    "https://build-forge-ai-eight.vercel.app"
 ];
 
 app.use(
     cors({
         origin: function(origin, callback) {
-            // Allow requests with no origin (like mobile apps or curl) or if origin is allowed
-            if (!origin || allowedOrigins.includes(origin) || origin.endsWith(".vercel.app")) {
-                callback(null, true);
-            } else {
-                callback(new Error("Not allowed by CORS"));
+            if (!origin) return callback(null, true);
+            if (allowedOrigins.includes(origin) || origin.endsWith(".vercel.app")) {
+                return callback(null, true);
             }
+            return callback(null, true);
         },
         credentials: true,
     })
 );
-
 app.use(logger);
 
 console.log("🔥 BACKEND APP LOADED");
